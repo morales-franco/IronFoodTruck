@@ -3,3 +3,9 @@
 ################################################################################
 
 /IronFoodTruck/bin/Debug/netcoreapp2.2
+/IronFoodTruck/obj
+/IronFoodTruck.Core/bin/Debug/netcoreapp2.2
+/IronFoodTruck.Core/obj
+/IronFoodTruck.Data/bin/Debug/netcoreapp2.2
+/IronFoodTruck.Data/obj
+/.vs/IronFoodTruck/v16/Server/sqlite3

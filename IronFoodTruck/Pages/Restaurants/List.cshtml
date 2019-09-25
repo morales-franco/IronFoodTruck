@@ -1,0 +1,35 @@
+﻿@page
+@model IronFoodTruck.Pages.Restaurants.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Restaurants - @Model.Message </h1>
+
+@if (Model.CrudMessage != null)
+{
+    <div class="alert alert-info">@Model.CrudMessage</div>
+}
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control"
+                   asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var restaurant in Model.Restaurants)
+    {
+        <partial name="_Summary" model="restaurant" />
+    }
+</table>
+
+<a asp-page="./Edit" class="btn btn-primary">Add New</a>
